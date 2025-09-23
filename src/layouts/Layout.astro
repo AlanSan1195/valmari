@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -8,12 +8,25 @@
 		<title>Valmarí - Barra de Snacks en Guadalajar</title>
 	</head>
 	<body>
+		<div class="absolute inset-0 -z-10 h-full w-full bg-white [background:linear-gradient(to_right,#fff_40%,#7C7A7A_100%)]"></div>
 		<slot />
 	</body>
 </html>
 
 <style is:global>
 	@import "tailwindcss";
+
+	@font-face {
+		font-family: 'valmari-font-base';
+		src: url('/public/fonts/valmari.woff2') format('woff2');
+
+		font-family: "font-primary";
+		src: url('/public/fonts/Fortieth.woff2') format('woff2');
+	}
+	@theme {
+		--font-base: 'valmari-font-base', sans-serif;
+		--font-primary: 'font-primary', sans-serif;
+	}
 	html,
 	body {
 		margin: 0;
