@@ -1,30 +1,36 @@
+---
+
+
+---
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="/src/styles/style.css">
 		<meta name="generator" content={Astro.generator} />
 		<title>Valmarí - Barra de Snacks en Guadalajar</title>
 	</head>
 	<body>
-		<div class="absolute inset-0 -z-10 h-full w-full bg-white [background:linear-gradient(to_right,#fff_40%,#7C7A7A_100%)]"></div>
+		<div class="absolute inset-0 -z-10 h-full w-full  bg-white [background:linear-gradient(to_right,#fff_40%,#7C7A7A_100%)]"></div>
 		<slot />
 	</body>
 </html>
 
 <style is:global>
+
 	@import "tailwindcss";
 
 	@font-face {
-		font-family: 'valmari-font-base';
-		src: url('/public/fonts/valmari.woff2') format('woff2');
+		font-family: 'font-base';
+		src: url('/fonts/valmari.woff2') format('woff2');
 
 		font-family: "font-primary";
-		src: url('/public/fonts/Fortieth.woff2') format('woff2');
+		src: url('/fonts/Fortieth.woff2') format('woff2');
 	}
 	@theme {
-		--font-base: 'valmari-font-base', sans-serif;
+		--font-base: 'font-base', sans-serif;
 		--font-primary: 'font-primary', sans-serif;
 	}
 	html,
@@ -32,5 +38,14 @@
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		display: flex;
+		justify-content: center;
+		overflow-x: hidden;
+
+
+
+
+
+
 	}
 </style>
