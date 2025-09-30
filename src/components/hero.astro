@@ -21,11 +21,21 @@
     <img src="/logo-full.svg" alt="logo de valmari" class="" />
   </div>
   <!-- logo-md -->
-   <div
+   <!-- <div
     id="svg-md"
     class="hidden opacity-0 md:transition-opacity md:transform md:opacity-100 md:delay-800 scale-140  md:block   transition-opacity md:-translate-x-10    "
   >
     <img src="/logo-full.svg" alt="logo de valmari" class="  " />
+  </div> -->
+  <!-- logo-prueba de animacion en lineas naranjas  -->
+   <div
+    id="prueba-md"
+    class="hidden opacity-0 md:transition-opacity md:transform md:opacity-100 md:delay-800 scale-140  md:block   transition-opacity md:-translate-x-10    "
+  >
+  
+    <img id="linea1" src="/linea1.svg" alt="linea 1" class=" absolute translate-x-2  scale-105 " />
+    <img src="/basic.svg" alt="logo de valmari" class="  " />
+    <img id="linea2" src="/linea2.svg" alt="linea 2" class=" absolute top-0  scale-110 translate-x-5 " />
   </div>
 </section>
 
@@ -33,6 +43,49 @@
   .edit {
     line-height: 0.8;
   }
+
+  @keyframes move-line-x {
+    to {
+      transform: translateX(0);
+
+    }
+    from{
+      transform: translateX(8px);
+
+    }
+  }
+
+  /* @keyframe scale-move-1 {
+    0% {
+      transform: scale(1) translateY(0);
+    }
+    50% {
+      transform: scale(1.25) translateY(-5px);
+    }
+    100% {
+      transform: scale(1) translateY(0);
+    }
+  } */
+  @keyframes move-line-y {
+    to {
+      transform: scale(1) translateY(0);
+
+    }
+    from{
+      transform: scale(1.02) translateY(0);
+
+    }
+    
+  }
+
+  #linea1 {
+    animation: move-line-x 3s ease-in infinite alternate;
+  }
+  #linea2 {
+    animation: move-line-y 3s ease-in infinite alternate;
+    animation-delay: 20ms;
+  }
+  
 </style>
 
 <!-- md:block absolute top-0 md:scale-75  md:top-0  transition-opacity md:translate-x-1/2  md:-translate-y-30 xl:scale-105 xl:top-0 xl:translate-x-4/5  xl:-translate-y-20 -->
