@@ -1,41 +1,48 @@
 <section
-  class="h-full flex flex-col md:flex-row md:items-center md:justify-center   mx-auto  "
+  class="h-full flex flex-col md:flex-row md:items-center md:justify-center mx-auto"
 >
   <!-- hero title  -->
-  <div
-    class="flex-col  w-auto mt-32  h-full md:content-end md:pb-36  z-20   "
-  >
-    <p class="font-base  md:pl-28 text-xl md:text-xl lg:text-3xl text-center md:text-left   md:rounded-lg w-full mx-auto ">
+  <div class="flex-col w-auto mt-32 h-full md:content-end md:pb-36 z-20">
+    <p
+      class="font-base md:pl-28 text-xl md:text-xl lg:text-3xl text-center md:text-left md:rounded-lg w-full mx-auto"
+    >
       <span class="text-[rgb(255,82,24)]">...</span> se van a juntar <span
         class="text-[#FF5218]">?</span
       >
     </p>
 
-    <p class="font-primary edit text-[160px] md:text-[155px] xl:text-[210px] text-center md:text-left md:pl-24    ">
+    <p
+      class="font-primary edit text-[160px] md:text-[155px] xl:text-[210px] text-center md:text-left md:pl-24"
+    >
       La botana primero
     </p>
-    
   </div>
   <!-- logo-sm -->
   <div id="svg-sm" class="md:hidden scale-60 -translate-y-25">
     <img src="/logo-full.svg" alt="logo de valmari" class="" />
   </div>
   <!-- logo-md -->
-   <!-- <div
+  <!-- <div
     id="svg-md"
     class="hidden opacity-0 md:transition-opacity md:transform md:opacity-100 md:delay-800 scale-140  md:block   transition-opacity md:-translate-x-10    "
   >
     <img src="/logo-full.svg" alt="logo de valmari" class="  " />
   </div> -->
   <!-- logo-prueba de animacion en lineas naranjas  -->
-   <div
-    id="prueba-md"
-    class="hidden opacity-0 md:transition-opacity md:transform md:opacity-100 md:delay-800 scale-140  md:block   transition-opacity md:-translate-x-10    "
-  >
-  
-    <img id="linea1" src="/linea1.svg" alt="linea 1" class=" absolute translate-x-2  scale-105 " />
-    <img src="/basic.svg" alt="logo de valmari" class="  " />
-    <img id="linea2" src="/linea2.svg" alt="linea 2" class=" absolute top-0  scale-110 translate-x-5 " />
+  <div id="prueba-md" class=" hidden opacity-0 md:block md:opacity-100 md:-translate-x-30 scale-140">
+    <img
+      id="linea1"
+      src="/linea1.svg"
+      alt="linea 1"
+      class="absolute translate-x-2 scale-105"
+    />
+    <img id="basic-logo" src="/basic.svg" alt="logo de valmari" class="" />
+    <img
+      id="linea2"
+      src="/linea2.svg"
+      alt="linea 2"
+      class="absolute top-0 scale-110 translate-x-5"
+    />
   </div>
 </section>
 
@@ -47,35 +54,37 @@
   @keyframes move-line-x {
     to {
       transform: translateX(0);
-
     }
-    from{
+    from {
       transform: translateX(8px);
-
     }
   }
-
-  /* @keyframe scale-move-1 {
-    0% {
-      transform: scale(1) translateY(0);
-    }
-    50% {
-      transform: scale(1.25) translateY(-5px);
-    }
-    100% {
-      transform: scale(1) translateY(0);
-    }
-  } */
   @keyframes move-line-y {
     to {
       transform: scale(1) translateY(0);
-
     }
-    from{
+    from {
       transform: scale(1.02) translateY(0);
-
     }
-    
+  }
+  @keyframes change-logo {
+    0% {
+      scale: 1.4;
+    }
+    50% {
+      scale: 1.3;
+    }
+    75% {
+      scale: 1;
+    }
+    100% {
+      scale: 0;
+    }
+  }
+   #prueba-md {
+    animation: change-logo 10s linear;
+    animation-delay: 800ms;
+    animation-timeline: scroll(block );
   }
 
   #linea1 {
@@ -85,7 +94,4 @@
     animation: move-line-y 3s ease-in infinite alternate;
     animation-delay: 20ms;
   }
-  
 </style>
-
-<!-- md:block absolute top-0 md:scale-75  md:top-0  transition-opacity md:translate-x-1/2  md:-translate-y-30 xl:scale-105 xl:top-0 xl:translate-x-4/5  xl:-translate-y-20 -->
