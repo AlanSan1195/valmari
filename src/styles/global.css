@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "font-mango";
+  src: url("/fonts/valmari.woff2") format("woff2");
+}
+@font-face {
+  font-family: "font-primary";
+  src: url("/fonts/Fortieth.woff2") format("woff2");
+}
+
+@theme {
+  --font-mango: "font-mango";
+  --font-primary: "font-primary", sans-serif;
+
+  --color-primary: #ff5218;
+  --color-secondary: #202c38;
+}
+
+html {
+  scroll-behavior: smooth;
+}
