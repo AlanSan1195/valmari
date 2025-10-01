@@ -1,5 +1,5 @@
 ---
-
+import '@/styles/global.css';
 ---
 
 <!doctype html>
@@ -22,20 +22,7 @@
   </body>
 </html>
 
-<style is:global>
-  @import "tailwindcss";
-
-  @font-face {
-    font-family: "font-base";
-    src: url("/fonts/valmari.woff2") format("woff2");
-
-    font-family: "font-primary";
-    src: url("/fonts/Fortieth.woff2") format("woff2");
-  }
-  @theme {
-    --font-base: "font-base", sans-serif;
-    --font-primary: "font-primary", sans-serif;
-  }
+<style >
   html,
   body {
     margin: 0;
