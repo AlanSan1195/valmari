@@ -1,16 +1,190 @@
 ---
 import '@/styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  keywords?: string;
+}
+
+const {
+  title = 'Valmarí - Barra de Snacks GDL | Eventos, Fiestas y Reuniones en Guadalajara',
+  description = 'Barra de snacks premium en Guadalajara (GDL). Packs personalizados para eventos, fiestas, bodas y reuniones. Botanas gourmet, candy bar y mesa de dulces. ¡Cotiza ahora!',
+  image = '/logo-full.svg',
+  keywords = 'barra de snacks gdl, barra de snacks guadalajara, snacks para eventos gdl, candy bar guadalajara, mesa de dulces gdl, botanas para fiestas guadalajara, eventos gdl, fiestas guadalajara, snacks premium gdl, botanas gourmet guadalajara, barra de botanas gdl, snacks para bodas guadalajara, eventos corporativos gdl, reuniones guadalajara'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://valmarisnack.netlify.app');
+const siteUrl = Astro.site || 'https://valmarisnack.netlify.app';
+const fullImageUrl = new URL(image, siteUrl).toString();
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/M.svg" />
-    <link rel="stylesheet" href="/src/styles/global.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <title>Valmarí - Barra de Snacks en Guadalajar</title>
+    
+    <!-- Meta Tags Principales -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Valmarí" />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/M.svg" />
+    <link rel="apple-touch-icon" href="/M.svg" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullImageUrl} />
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:site_name" content="Valmarí" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={fullImageUrl} />
+    
+    <!-- Geo Tags para SEO Local -->
+    <meta name="geo.region" content="MX-JAL" />
+    <meta name="geo.placename" content="Guadalajara" />
+    <meta name="geo.position" content="20.6597;-103.3496" />
+    <meta name="ICBM" content="20.6597, -103.3496" />
+    
+    <!-- SEO Adicional -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="theme-color" content="#FF6B35" />
+    
+    <!-- Datos Estructurados JSON-LD para Negocio Local -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Valmarí",
+      "alternateName": "Valmarí Snacks GDL",
+      "description": "Barra de snacks premium para eventos, fiestas y reuniones en Guadalajara",
+      "image": fullImageUrl,
+      "url": siteUrl,
+      "telephone": "+52-33-XXXX-XXXX",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Guadalajara",
+        "addressRegion": "Jalisco",
+        "addressCountry": "MX"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "20.6597",
+        "longitude": "-103.3496"
+      },
+      "priceRange": "$$",
+      "servesCuisine": "Snacks",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Guadalajara"
+        },
+        {
+          "@type": "State",
+          "name": "Jalisco"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Barra de Snacks",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Barra de Snacks para Eventos",
+              "description": "Servicio de barra de snacks premium para fiestas, eventos corporativos y sociales"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Barra de Snacks para Fiestas",
+              "description": "Packs personalizados de snacks gourmet para fiestas y celebraciones"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Candy Bar y Mesa de Dulces",
+              "description": "Servicio de candy bar y mesa de dulces para bodas y eventos especiales"
+            }
+          }
+        ]
+      }
+    })} />
+    
+    <!-- Datos Estructurados para Organización -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Valmarí",
+      "url": siteUrl,
+      "logo": fullImageUrl,
+      "description": "Barra de snacks premium para eventos y fiestas en Guadalajara",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Guadalajara",
+        "addressRegion": "Jalisco",
+        "addressCountry": "MX"
+      },
+      "sameAs": [
+        "https://www.instagram.com/valmari138/",
+        "https://www.facebook.com/val.mari.962965",
+        "https://www.tiktok.com/@valmari90"
+      ]
+    })} />
+    
+    <!-- Datos Estructurados para FAQ (Preguntas Frecuentes) -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Ofrecen servicio de barra de snacks en Guadalajara?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, Valmarí ofrece servicio de barra de snacks premium en toda la zona metropolitana de Guadalajara (GDL). Contamos con packs personalizados para eventos, fiestas, bodas y reuniones corporativas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué incluyen los packs de snacks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nuestros packs incluyen una selección premium de botanas gourmet, gomitas, dulces, chocolates y snacks salados. Todos los packs son personalizables según tus necesidades y el tipo de evento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hacen servicio para eventos corporativos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, ofrecemos servicio especializado para eventos corporativos, reuniones de negocios, conferencias y celebraciones empresariales en Guadalajara."
+          }
+        }
+      ]
+    })} />
+    
+    <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
   <body>
     <div

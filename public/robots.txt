@@ -1,0 +1,14 @@
+# robots.txt para Valmarí
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://valmarisnack.netlify.app/sitemap-index.xml
+Sitemap: https://valmarisnack.netlify.app/sitemap-0.xml
+
+# Crawl-delay para bots
+Crawl-delay: 1
+
+# Bloquear recursos innecesarios
+Disallow: /api/
+Disallow: /*.json$
