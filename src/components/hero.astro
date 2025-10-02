@@ -1,11 +1,13 @@
 <section
-  class="h-full flex flex-col items-center content-center justify-center md:flex-row md:items-center md:justify-center mx-4 md:mx-0  "
+  class="h-full flex flex-col items-center content-center justify-center md:flex-row md:items-center md:justify-center mx-4 md:mx-0"
   aria-label="Sección principal de Valmarí"
 >
   <!-- hero title  -->
-  <div class="flex-col w-auto h-full items-center content-center  md:content-end md:pb-36  z-20">
+  <div
+    class="flex-col w-auto h-full items-center content-center md:content-end md:pb-36  translate-y-10 z-20"
+  >
     <p
-      class=" font-mango  md:pl-28 text-2xl md:text-xl lg:text-3xl text-center md:text-left md:rounded-lg w-full mx-auto"
+      class="font-mango md:pl-28 text-2xl md:text-xl lg:text-3xl text-center md:text-left md:rounded-lg w-full mx-auto"
     >
       <span class="text-primary">...</span> se van a juntar <span
         class="text-primary">?</span
@@ -13,7 +15,7 @@
     </p>
 
     <h1
-      class="font-primary edit text-[140px] md:text-[155px] xl:text-[210px] text-center md:text-left md:pl-24"
+      class="font-primary edit text-[120px] md:text-[155px] xl:text-[210px] text-center md:text-left md:pl-24"
     >
       La botana primero
     </h1>
@@ -22,14 +24,19 @@
   <!-- <div id="svg-sm" class="md:hidden scale-90  ">
     <img src="/logo-full.svg" alt="logo de valmari" class="" />
   </div> -->
-  <div id="prueba-sm" class=" md:hidden  scale-85">
+  <div id="prueba-sm" class="md:hidden scale-70">
     <img
       id="linea1"
       src="/linea1.svg"
       alt="linea 1"
       class="absolute translate-x-2 scale-105"
     />
-    <img id="basic-logo" src="/basic.svg" alt="logo de valmari" class="md:hidden" />
+    <img
+      id="basic-logo"
+      src="/basic.svg"
+      alt="logo de valmari"
+      class="md:hidden"
+    />
     <img
       id="linea2"
       src="/linea2.svg"
@@ -37,7 +44,10 @@
       class="absolute top-0 scale-110 translate-x-5"
     />
   </div>
-  <div id="prueba-md" class=" hidden opacity-0 md:block md:opacity-100 md:-translate-x-30 scale-140">
+  <div
+    id="prueba-md"
+    class="hidden opacity-0 md:block md:opacity-100 md:-translate-x-30 scale-140"
+  >
     <img
       id="linea1"
       src="/linea1.svg"
@@ -82,15 +92,15 @@
     50% {
       scale: 0.5;
     }
-    
+
     100% {
       scale: 0;
     }
   }
-   #prueba-md {
+  #prueba-md {
     animation: change-logo 10s linear;
     animation-delay: 800ms;
-    animation-timeline: scroll(block );
+    animation-timeline: scroll(block);
   }
 
   #linea1 {
