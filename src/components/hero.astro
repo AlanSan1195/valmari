@@ -1,9 +1,9 @@
 <section
-  class="h-full flex flex-col md:flex-row md:items-center md:justify-center mx-4 md:mx-0"
+  class="h-full flex flex-col items-center content-center justify-center md:flex-row md:items-center md:justify-center mx-4 md:mx-0  "
   aria-label="Sección principal de Valmarí"
 >
   <!-- hero title  -->
-  <div class="flex-col w-auto mt-32 h-full md:content-end md:pb-36 z-20">
+  <div class="flex-col w-auto h-full items-center content-center  md:content-end md:pb-36  z-20">
     <p
       class=" font-mango  md:pl-28 text-2xl md:text-xl lg:text-3xl text-center md:text-left md:rounded-lg w-full mx-auto"
     >
@@ -13,23 +13,30 @@
     </p>
 
     <h1
-      class="font-primary edit text-[150px] md:text-[155px] xl:text-[210px] text-center md:text-left md:pl-24"
+      class="font-primary edit text-[140px] md:text-[155px] xl:text-[210px] text-center md:text-left md:pl-24"
     >
       La botana primero
     </h1>
   </div>
   <!-- logo-sm -->
-  <div id="svg-sm" class="md:hidden scale-60 -translate-y-18 ">
+  <!-- <div id="svg-sm" class="md:hidden scale-90  ">
     <img src="/logo-full.svg" alt="logo de valmari" class="" />
-  </div>
-  <!-- logo-md -->
-  <!-- <div
-    id="svg-md"
-    class="hidden opacity-0 md:transition-opacity md:transform md:opacity-100 md:delay-800 scale-140  md:block   transition-opacity md:-translate-x-10    "
-  >
-    <img src="/logo-full.svg" alt="logo de valmari" class="  " />
   </div> -->
-  <!-- logo-prueba de animacion en lineas naranjas  -->
+  <div id="prueba-sm" class=" md:hidden  scale-85">
+    <img
+      id="linea1"
+      src="/linea1.svg"
+      alt="linea 1"
+      class="absolute translate-x-2 scale-105"
+    />
+    <img id="basic-logo" src="/basic.svg" alt="logo de valmari" class="md:hidden" />
+    <img
+      id="linea2"
+      src="/linea2.svg"
+      alt="linea 2"
+      class="absolute top-0 scale-110 translate-x-5"
+    />
+  </div>
   <div id="prueba-md" class=" hidden opacity-0 md:block md:opacity-100 md:-translate-x-30 scale-140">
     <img
       id="linea1"
@@ -87,10 +94,10 @@
   }
 
   #linea1 {
-    animation: move-line-x 3s ease-in infinite alternate;
+    animation: move-line-x 2s ease-in infinite alternate;
   }
   #linea2 {
-    animation: move-line-y 3s ease-in infinite alternate;
+    animation: move-line-y 2s ease-in infinite alternate;
     animation-delay: 20ms;
   }
 </style>
