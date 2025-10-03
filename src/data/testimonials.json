@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Alberto",
+    "comment": "Me encantó el servicio y muy buena onda, gracias Valmarí! 🔥",
+    "rating": 5,
+    "event": "Fiesta de cumpleaños"
+  },
+  {
+    "id": 2,
+    "name": "Meli",
+    "comment": "Me encantó el servicio y muy buena onda, gracias Valmarí! ❤️ La barra de snacks fue el centro de atención en mi evento.",
+    "rating": 5,
+    "event": "Evento corporativo"
+  },
+  {
+    "id": 3,
+    "name": "José",
+    "comment": "Me encantó el servicio y muy buena onda, gracias Valmarí! 🔥 Súper recomendado para cualquier tipo de evento. La variedad de snacks estuvo increíble.",
+    "rating": 5,
+    "event": "Reunión familiar"
+  },
+  {
+    "id": 4,
+    "name": "Karla",
+    "comment": "Me encantó el servicio y muy buena onda, gracias Valmarí! 🧡 Todo estuvo perfecto, desde la presentación hasta el sabor.",
+    "rating": 5,
+    "event": "Baby shower"
+  }
+]

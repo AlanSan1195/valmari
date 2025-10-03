@@ -114,14 +114,18 @@ valmari/
 │   │   ├── nav.astro          # Navegación sticky con blur
 │   │   ├── hero.astro         # Hero section con animaciones
 │   │   ├── Packs.astro        # Tarjetas de paquetes interactivas
+│   │   ├── Testimonials.astro # Sistema de testimonios 🆕
 │   │   ├── Production.astro   # Sección "Próximamente"
 │   │   └── Footer.astro       # Footer con redes sociales
+│   ├── data/
+│   │   └── testimonials.json  # Datos de testimonios 🆕
 │   ├── layouts/
 │   │   └── Layout.astro       # Layout principal con SEO
 │   ├── pages/
 │   │   └── index.astro        # Página principal
 │   └── styles/
 │       └── global.css         # Estilos globales y fuentes
+├── TESTIMONIOS.md             # Guía de gestión de testimonios 🆕
 ├── netlify.toml               # Configuración de Netlify
 ├── robots.txt                 # Configuración para crawlers
 └── package.json
@@ -144,6 +148,64 @@ valmari/
 - **SEO optimizado**: Perfecto para sitios que necesitan posicionamiento
 - **Componentes reutilizables**: Arquitectura modular y mantenible
 - **Cero JS por defecto**: Solo carga JavaScript cuando es necesario
+
+---
+
+## 🤖 Desarrollo Asistido por IA
+
+### Uso de Inteligencia Artificial como Herramienta
+
+Este proyecto incorpora el uso estratégico de **IA (Cascade de Windsurf)** como herramienta de desarrollo, específicamente en la implementación del sistema de testimonios de clientes.
+
+#### 📋 Caso de Estudio: Sistema de Testimonios
+
+**Contexto:** Se solicitó asesoría para implementar una sección de comentarios de clientes en la landing page.
+
+**Propuesta Inicial del Desarrollador:**
+- Crear un input en la web para que los clientes dejen comentarios directamente
+- Guardar los comentarios en la página
+
+**Análisis y Recomendación de IA (Cascade):**
+La IA analizó el proyecto y propuso una **estrategia superior**:
+
+1. **Fase 1**: Testimonios estáticos gestionados manualmente (implementación inmediata)
+2. **Fase 2**: Acumular reseñas verificadas en Google My Business
+3. **Fase 3**: Integrar Google Reviews API para testimonios automáticos
+
+**Ventajas de esta estrategia:**
+- ✅ Evita spam y contenido inapropiado
+- ✅ Mayor credibilidad con testimonios verificados
+- ✅ Beneficios SEO con Google Reviews
+- ✅ No requiere backend complejo inicialmente
+- ✅ Escalable y profesional
+
+#### 💡 Reflexiones sobre el Uso de IA
+
+> **"La IA es una herramienta poderosa, pero el criterio humano es esencial"**
+
+**Lecciones aprendidas:**
+
+1. **Revisión Crítica**: El código y las sugerencias de la IA fueron **revisados y validados** antes de ser aceptados. No se implementó nada a ciegas.
+
+2. **Conocimiento del Negocio**: Es fundamental que el desarrollador **conozca lo que ofrece** su proyecto. La IA proporciona soluciones técnicas, pero la visión del negocio viene del humano.
+
+3. **Aprendizaje Continuo**: Usar IA como herramienta de aprendizaje acelera el desarrollo y enseña mejores prácticas. Cada interacción es una oportunidad de aprender.
+
+4. **Facilidad de Iteración**: Con las herramientas adecuadas, es sorprendentemente fácil seguir adelante y mejorar el proyecto continuamente.
+
+5. **Colaboración Inteligente**: La mejor combinación es:
+   - **Humano**: Visión, estrategia, validación, decisiones de negocio
+   - **IA**: Implementación técnica, mejores prácticas, optimizaciones, código
+
+#### 🛠️ Modelo Utilizado
+
+- **IA**: Cascade (Windsurf)
+- **Rol**: Asistente de desarrollo y asesor técnico
+- **Implementación**: Componente `Testimonials.astro` + estrategia de datos
+
+#### ⚠️ Importante
+
+> La IA es una **herramienta**, no un reemplazo del desarrollador. El pensamiento crítico, la revisión de código y el entendimiento del negocio siguen siendo responsabilidad humana.
 
 ---
 
@@ -201,17 +263,31 @@ Todos los comandos se ejecutan desde la raíz del proyecto:
 - Hover effects con transformaciones 3D
 - Información progresiva (reveal on hover)
 
-### 3. **Navigation** (`nav.astro`)
+### 3. **Testimonials Section** (`Testimonials.astro`) 🆕
+- **Sistema de testimonios con estrategia progresiva**
+- Grid responsive (1/2/4 columnas según dispositivo)
+- Animaciones de entrada escalonadas
+- Sistema de calificación con estrellas
+- Datos gestionados desde JSON (`src/data/testimonials.json`)
+- Preparado para futura integración con Google Reviews API
+
+**Estrategia de Implementación:**
+1. **Fase 1 (Actual)**: Testimonios estáticos gestionados manualmente
+2. **Fase 2 (Futuro)**: Integración automática con Google My Business
+
+> 📖 Ver guía completa en [`TESTIMONIOS.md`](./TESTIMONIOS.md)
+
+### 4. **Navigation** (`nav.astro`)
 - Sticky navbar con backdrop blur
 - Logo minimalista
 - Responsive (diferentes layouts mobile/desktop)
 
-### 4. **Footer** (`Footer.astro`)
+### 5. **Footer** (`Footer.astro`)
 - Enlaces a redes sociales (Instagram, Facebook, TikTok)
 - Gradiente de fondo personalizado
 - Copyright y derechos reservados
 
-### 5. **Production** (`Production.astro`)
+### 6. **Production** (`Production.astro`)
 - Sección "Próximamente"
 - Diseño minimalista con círculo decorativo
 - Tipografía grande y llamativa
@@ -234,9 +310,11 @@ El sitio está desplegado en **Netlify** con despliegue continuo desde el reposi
 
 ## 🎯 Próximos Pasos
 
+- [x] ~~Integrar testimonios de clientes~~ ✅ **Completado**
+- [ ] Acumular reseñas en Google My Business
+- [ ] Integrar Google Reviews API con Astro
 - [ ] Implementar sistema de cotizaciones en línea
 - [ ] Agregar galería de eventos pasados
-- [ ] Integrar testimonios de clientes
 - [ ] Crear blog con tips para eventos
 - [ ] Implementar chat en vivo
 - [ ] Agregar calculadora de paquetes
