@@ -4,7 +4,7 @@
 >
   <!-- hero title  -->
   <div
-    class="flex-col w-auto h-full items-center content-center md:content-end md:pb-36  translate-y-10 z-20"
+    class="flex-col w-auto h-full items-center content-center md:content-end md:pb-36 translate-y-10 z-20"
   >
     <p
       class="font-mango md:pl-28 text-2xl md:text-xl lg:text-3xl text-center md:text-left md:rounded-lg w-full mx-auto"
@@ -20,10 +20,7 @@
       La botana primero
     </h1>
   </div>
-  <!-- logo-sm -->
-  <!-- <div id="svg-sm" class="md:hidden scale-90  ">
-    <img src="/logo-full.svg" alt="logo de valmari" class="" />
-  </div> -->
+
   <div id="prueba-sm" class="md:hidden scale-70">
     <img
       id="linea1"
@@ -31,6 +28,7 @@
       alt="linea 1"
       class="absolute translate-x-2 scale-105"
     />
+
     <img
       id="basic-logo"
       src="/basic.svg"
@@ -48,21 +46,20 @@
     id="prueba-md"
     class="hidden opacity-0 md:block md:opacity-100 md:-translate-x-30 scale-140"
   >
-  <div>
-
-    <img
-      id="linea1"
-      src="/linea1.svg"
-      alt="linea 1"
-      class="absolute translate-x-2 scale-105"
-    />
-    <img
-      id="linea1"
-      src="/linea1.svg"
-      alt="linea 1"
-      class="absolute top-0 left-0 translate-x-2 scale-110 pulse blur-sm"
-    />
-  </div>
+    <div class="">
+      <img
+        id="linea1"
+        src="/linea1.svg"
+        alt="linea 1"
+        class="absolute translate-x-2 scale-105"
+      />
+      <img
+        id="linea1"
+        src="/linea1.svg"
+        alt="linea 1"
+        class="absolute top-0 left-0 translate-x-2 scale-110 pulse blur-sm"
+      />
+    </div>
     <img id="basic-logo" src="/basic.svg" alt="logo de valmari" class="" />
     <img
       id="linea2"
@@ -94,6 +91,7 @@
       transform: scale(1.02) translateY(0);
     }
   }
+
   @keyframes change-logo {
     0% {
       scale: 1.4;
@@ -112,15 +110,15 @@
       opacity: 0.5;
     }
     50% {
-      opacity: 0.75;
+      opacity: 0.95;
     }
     100% {
-      opacity: 0.5;
+      opacity: 0.9;
     }
   }
 
   .pulse {
-    animation: pulse 2s  infinite ;
+    animation: pulse 2s infinite;
   }
   #prueba-md {
     animation: change-logo 10s linear;
