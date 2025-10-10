@@ -48,12 +48,21 @@
     id="prueba-md"
     class="hidden opacity-0 md:block md:opacity-100 md:-translate-x-30 scale-140"
   >
+  <div>
+
     <img
       id="linea1"
       src="/linea1.svg"
       alt="linea 1"
       class="absolute translate-x-2 scale-105"
     />
+    <img
+      id="linea1"
+      src="/linea1.svg"
+      alt="linea 1"
+      class="absolute top-0 left-0 translate-x-2 scale-110 pulse blur-sm"
+    />
+  </div>
     <img id="basic-logo" src="/basic.svg" alt="logo de valmari" class="" />
     <img
       id="linea2"
@@ -96,6 +105,22 @@
     100% {
       scale: 0;
     }
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+
+  .pulse {
+    animation: pulse 2s  infinite ;
   }
   #prueba-md {
     animation: change-logo 10s linear;
