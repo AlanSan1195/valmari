@@ -1,0 +1,124 @@
+
+<!-- sm -->
+<div id="logo-hero-sm" class="md:hidden scale-70">
+  <img
+    id="linea1"
+    src="/linea1.svg"
+    alt="linea 1"
+    class="absolute translate-x-2 scale-105"
+  />
+
+  <img
+    id="basic-logo"
+    src="/basic.svg"
+    alt="logo de valmari"
+    class="md:hidden"
+  />
+  <img
+    id="linea2"
+    src="/linea2.svg"
+    alt="linea 2"
+    class="absolute top-0 scale-110 translate-x-5"
+  />
+</div>
+
+<!-- md -->
+<div
+  id="logo-hero-md"
+  class="hidden opacity-0 h-full w-full md:block md:opacity-100 content-center relative scale-100 md:scale-90"
+>
+  <div id="logo-md" class="">
+    <div class="relative flex justify-center items-center">
+      <img
+        id="basic-logo"
+        src="/basic.svg"
+        alt="logo de valmari"
+        class="scale-90 md:scale-130"
+      />
+      <img
+        id="linea2"
+        src="/linea2.svg"
+        alt="linea 2"
+        class="absolute top-0 left-0 translate-x-8 -translate-y-0 md:translate-x-7 md:-translate-y-6 scale-100 md:scale-130 -z-10"
+      />
+      <div
+        id="blur-logo-md"
+        class="absolute inset-0 scale-100 md:scale-110 -z-10"
+      >
+        <img
+          id="linea1"
+          src="/linea1.svg"
+          alt="linea 1"
+          class="absolute translate-x-4 -translate-y-4 scale-90 md:scale-110"
+        />
+        <img
+          id="linea1"
+          src="/linea1.svg"
+          alt="linea 1"
+          class="absolute top-0 left-0 scale-90 md:scale-110 pulse blur-sm"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes move-line-x {
+    to {
+      transform: translateX(0);
+    }
+    from {
+      transform: translateX(10px);
+    }
+  }
+  @keyframes move-line-y {
+    to {
+      transform: scale(1) translateY(0);
+    }
+    from {
+      transform: scale(1.02) translateY(0);
+    }
+  }
+
+  @keyframes change-logo {
+    0% {
+      scale: 1.4;
+    }
+    50% {
+      scale: 0.5;
+    }
+
+    100% {
+      scale: 0;
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 0.95;
+    }
+    100% {
+      opacity: 0.9;
+    }
+  }
+
+  .pulse {
+    animation: pulse 3s infinite;
+  }
+  #prueba-md {
+    animation: change-logo 10s linear;
+    animation-delay: 800ms;
+    animation-timeline: scroll(block);
+  }
+
+  #linea1 {
+    animation: move-line-x 3s ease-in infinite alternate;
+  }
+  #linea2 {
+    animation: move-line-y 3s ease-in infinite alternate;
+    animation-delay: 20ms;
+  }
+</style>
