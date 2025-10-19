@@ -1,72 +1,85 @@
 <section
-  class="h-full flex flex-col items-center content-center justify-center md:flex-row md:items-center md:justify-center mx-4 md:mx-0"
+  class="h-full w-full flex items-center content-center justify-center md:items-center md:justify-center mx-4 md:mx-0 "
   aria-label="Sección principal de Valmarí"
 >
-  <!-- hero title  -->
   <div
-    class="flex-col w-auto h-full items-center content-center md:content-end md:pb-36 translate-y-10 z-20"
+    id="hero-container"
+    class=" max-w-xl  sm:max-w-2xl md:max-w-7xl  h-full flex flex-col md:flex-row justify-center mx-auto md:gap-x-8"
   >
-    <p
-      class="font-mango md:pl-28 text-2xl md:text-xl lg:text-3xl text-center md:text-left md:rounded-lg w-full mx-auto"
+    <!-- hero title  -->
+    <div
+      class="flex-col w-auto h-full items-center content-center   z-20 
+       "
     >
-      <span class="text-primary">...</span> se van a juntar <span
-        class="text-primary">?</span
+      <p
+        class="font-mango  text-2xl md:text-xl lg:text-3xl text-center  md:rounded-lg w-full mx-auto"
       >
-    </p>
+        <span class="text-primary">...</span> se van a juntar <span
+          class="text-primary">?</span
+        >
+      </p>
 
-    <h1
-      class="font-primary edit text-[120px] md:text-[155px] xl:text-[210px] text-center md:text-left md:pl-24"
-    >
-      La botana primero
-    </h1>
-  </div>
+      <h1 class="font-primary edit text-[120px] xl:text-[150px] text-center">
+        La botana primero
+      </h1>
+    </div>
 
-  <div id="prueba-sm" class="md:hidden scale-70">
-    <img
-      id="linea1"
-      src="/linea1.svg"
-      alt="linea 1"
-      class="absolute translate-x-2 scale-105"
-    />
-
-    <img
-      id="basic-logo"
-      src="/basic.svg"
-      alt="logo de valmari"
-      class="md:hidden"
-    />
-    <img
-      id="linea2"
-      src="/linea2.svg"
-      alt="linea 2"
-      class="absolute top-0 scale-110 translate-x-5"
-    />
-  </div>
-  <div
-    id="prueba-md"
-    class="hidden opacity-0 md:block md:opacity-100 md:-translate-x-30 scale-140"
-  >
-    <div class="">
+    <div id="logo-hero-sm" class="md:hidden scale-70">
       <img
         id="linea1"
         src="/linea1.svg"
         alt="linea 1"
         class="absolute translate-x-2 scale-105"
       />
+
       <img
-        id="linea1"
-        src="/linea1.svg"
-        alt="linea 1"
-        class="absolute top-0 left-0 translate-x-2 scale-110 pulse blur-sm"
+        id="basic-logo"
+        src="/basic.svg"
+        alt="logo de valmari"
+        class="md:hidden"
+      />
+      <img
+        id="linea2"
+        src="/linea2.svg"
+        alt="linea 2"
+        class="absolute top-0 scale-110 translate-x-5"
       />
     </div>
-    <img id="basic-logo" src="/basic.svg" alt="logo de valmari" class="" />
-    <img
-      id="linea2"
-      src="/linea2.svg"
-      alt="linea 2"
-      class="absolute top-0 scale-110 translate-x-5"
-    />
+    <div
+      id="logo-hero-md"
+      class="hidden opacity-0 h-full w-full md:block md:opacity-100 content-center relative  scale-100 md:scale-90 "
+    >
+      <div id="logo-md" class=" ">
+        <div class="relative flex justify-center items-center">
+          <img
+            id="basic-logo"
+            src="/basic.svg"
+            alt="logo de valmari"
+            class=" scale-90 md:scale-130  "
+          />
+          <img
+            id="linea2"
+            src="/linea2.svg"
+            alt="linea 2"
+            class="absolute top-0 left-0 translate-x-8 -translate-y-0  md:translate-x-7 md:-translate-y-6 scale-100 md:scale-130"
+          /> 
+          <div id="blur-logo-md" class="absolute inset-0  scale-100 md:scale-110 ">
+            <img
+              id="linea1"
+              src="/linea1.svg"
+              alt="linea 1"
+              class="absolute translate-x-4 -translate-y-4 scale-90 md:scale-110"
+            />
+            <img
+              id="linea1"
+              src="/linea1.svg"
+              alt="linea 1"
+              class="absolute top-0 left-0 scale-90 md:scale-110 pulse blur-sm"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -80,7 +93,7 @@
       transform: translateX(0);
     }
     from {
-      transform: translateX(8px);
+      transform: translateX(10px);
     }
   }
   @keyframes move-line-y {
@@ -118,7 +131,7 @@
   }
 
   .pulse {
-    animation: pulse 2s infinite;
+    animation: pulse 3s infinite;
   }
   #prueba-md {
     animation: change-logo 10s linear;
@@ -127,10 +140,10 @@
   }
 
   #linea1 {
-    animation: move-line-x 2s ease-in infinite alternate;
+    animation: move-line-x 3s ease-in infinite alternate;
   }
   #linea2 {
-    animation: move-line-y 2s ease-in infinite alternate;
+    animation: move-line-y 3s ease-in infinite alternate;
     animation-delay: 20ms;
   }
 </style>
