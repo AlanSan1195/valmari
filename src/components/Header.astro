@@ -7,9 +7,9 @@ import PhoneIcon from "@/assets/phone.svg";
 <nav
   class="navbar sticky flex w-full items-center justify-between  py-8 px-2 md:px-12 h-16 z-90 top-0  backdrop-blur-xl"
 >
-  <M class="w-15 h-15" />
+  <M class=" w-14 h-14 md:w-15 md:h-15" />
   <div id="nav-md" class="items-center gap-x-4 hidden md:flex   ">
-    <span class="font-mango font-bold hidden md:flex md:text-xl"
+    <span class="font-mango  hidden md:flex md:text-xl"
       >Barra de Snacks</span
     >
     <PartyIcon class="" />
@@ -21,16 +21,17 @@ import PhoneIcon from "@/assets/phone.svg";
       <PhoneIcon class="text-primary w-6 h-6" />
     </div>
   </div>
-  <h3 class="font-mango text-sm font-bold md:hidden ml-10">Barra de Snacks</h3>
+  <h3 class="font-mango text-sm  md:hidden mx-auto">Barra de Snacks</h3>
   <div id="nav-sm" class="items-center justify-between flex md:hidden">
-    <div class="flex gap-x-3 items-center content-center scale-85">
-      <PartyIcon class="" />
-      <div
+    <div class="flex gap-x-3 items-center  content-center scale-85">
+     
+      <!-- <div
         id="number-phone"
         class="w-auto h-full bg-black rounded-full p-2 cursor-pointer"
       >
-        <PhoneIcon class="text-primary w-6 h-6" />
-      </div>
+        <PhoneIcon class="w-5 h-5 md:w-6 md:h-6" />
+      </div> -->
+       <PartyIcon class="" />
     </div>
   </div>
 </nav>
