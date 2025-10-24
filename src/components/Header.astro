@@ -2,36 +2,90 @@
 import M from "@/assets/M.svg";
 import PartyIcon from "@/assets/party.svg";
 import PhoneIcon from "@/assets/phone.svg";
+
+export const navLinks = [
+  { name: "Inicio", href: "#home" },
+  { name: "Packs", href: "#packs" },
+  { name: "Nosotros", href: "#nosotros" },
+  { name: "Galeria", href: "#galeria" },
+  { name: "Clientes", href: "#clientes" },
+];
+
+export const whatsappNumber = "5512345678"; // Reemplaza con tu número
+export const whatsappMessage = "Hola, me gustaría información sobre sus servicios";
+export const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 ---
 
-<nav
-  class="navbar sticky flex w-full items-center justify-between  py-8 px-2 md:px-12 h-16 z-90 top-0  backdrop-blur-xl"
->
-  <M class=" w-14 h-14 md:w-15 md:h-15" />
-  <div id="nav-md" class="items-center gap-x-4 hidden md:flex   ">
-    <span class="font-mango  hidden md:flex md:text-xl"
-      >Barra de Snacks</span
+<header class="navbar mx-auto sticky flex w-auto bg-black/10 backdrop-blur-xl sm:w-full sm:bg-transparent sm:backdrop-blur-none items-center justify-center py-8 h-16 z-80  top-0 sm:top-2  ">
+  <nav
+    class=" w-full flex items-center justify-between mx-6 md:mx-18 gap-x-8     "
+    aria-label="Navegación principal"
+  >
+    <a href="#home" aria-label="Ir a inicio">
+      <M class="w-14 h-14 md:w-15 md:h-15" />
+    </a>
+
+    <!-- Navegación desktop -->
+    <ul class="font-mango gap-x-12    hidden md:flex list-none   w-2xl md:justify-between  md:rounded-2xl  bg-black/10 backdrop-blur-sm items-center py-3 px-12" role="menubar">
+      {navLinks.map((link) => (
+        <li role="none">
+          <a
+            href={link.href}
+            class="hover:text-primary transition-colors duration-200 font-mango  text-lg font-medium drop-shadow-sm drop-shadow-white/40 hover:drop-shadow-none "
+            role="menuitem"
+          >
+            {link.name}
+          </a>
+        </li>
+      ))}
+    <!-- Acciones desktop -->
+  </ul>
+  <div class="items-center justify-center content-center gap-x-4 hidden md:flex bg-primary rounded-2xl py-1 px-3">
+     <!-- <button
+      type="button"
+      id="party-button-md"
+      aria-label="Botón de confeti de fiesta"
+      class="hover:scale-110 transition-transform duration-300"
     >
-    <PartyIcon class="" />
-    <!-- cambiar a <a></a> para agregar telefono y abra con watsapp -->
-    <div
-      id="number-phone"
-      class="w-auto h-full bg-black rounded-full p-2 cursor-pointer"
+      <PartyIcon class="w-12 h-12" />
+    </button>  -->
+
+    <a
+      href={whatsappUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contactar por WhatsApp"
+      class=" "
     >
-      <PhoneIcon class="text-primary w-6 h-6" />
-    </div>
+      <PhoneIcon class="text-black w-6 h-6" />
+    </a>
   </div>
-  <h3 class="font-mango text-sm  md:hidden mx-auto">Barra de Snacks</h3>
-  <div id="nav-sm" class="items-center justify-between flex md:hidden">
-    <div class="flex gap-x-3 items-center  content-center scale-85">
-     
-      <!-- <div
-        id="number-phone"
-        class="w-auto h-full bg-black rounded-full p-2 cursor-pointer"
-      >
-        <PhoneIcon class="w-5 h-5 md:w-6 md:h-6" />
-      </div> -->
-       <PartyIcon class="" />
+
+
+
+    <!-- Acciones mobile -->
+    <div class="items-center justify-between flex md:hidden">
+      <a id="party-button"  target="_blank" rel="noopener noreferrer" class="flex gap-x-3 items-center content-center scale-85">
+      <PartyIcon class="w-12 h-12"  />
+      </a>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>
+
+<script>
+  import { shootConfettiMobile, shootConfetti } from "@/utils/confeti";
+
+  // Agregar event listener al botón de fiesta
+  const partyButtonMobile = document.getElementById("party-button");
+  const partyButton = document.getElementById("party-button-md");
+  if (partyButtonMobile) {
+    partyButtonMobile.addEventListener("click", () => {
+      shootConfettiMobile();
+    });
+  }
+  if (partyButton) {
+    partyButton.addEventListener("click", () => {
+      shootConfetti();
+    });
+  }
+</script>

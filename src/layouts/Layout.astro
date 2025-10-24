@@ -1,5 +1,6 @@
 ---
 import '@/styles/global.css';
+import NavSm from '@/components/NavSm.astro';
 
 interface Props {
   title?: string;
@@ -191,7 +192,7 @@ const fullImageUrl = new URL(image, siteUrl).toString();
       class="absolute inset-0 -z-10 h-full w-full bg-white [background:linear-gradient(to_right,#fff_40%,#7C7A7A_100%)]"
     >
     </div>
-
+    <NavSm />
     <slot />
   </body>
 </html>
