@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "name": "Pack 1",
+    "title": "Pa' reuniones relax... y risas con gomitas.",
+    "description": "Ideal para eventos pequeños, vibe tranqui pero con sabor.",
+    "capacity": "7-14 personas",
+    "image": "/promo1.webp",
+    "imageAlt": "Pack 1 de Valmarí - Barra de snacks para reuniones pequeñas con gomitas y botanas",
+    "bgColor": "bg-primary",
+    "textColor": "text-black",
+    "titleColor": "text-black",
+    "reserveButtonColor": "text-black"
+  },
+  {
+    "id": 2,
+    "name": "Pack 2",
+    "title": "Aquí ya se arma la botana de verdad",
+    "description": "Más variedad, más color, más flow para eventos con más ritmo.",
+    "capacity": "14-25 personas",
+    "image": "/promo3.webp",
+    "imageAlt": "Pack 2 de Valmarí - Barra de snacks completa con variedad de botanas gourmet para eventos medianos",
+    "bgColor": "bg-black",
+    "textColor": "text-white",
+    "titleColor": "text-primary",
+    "reserveButtonColor": "text-primary"
+  },
+  {
+    "id": 3,
+    "name": "Pack 3",
+    "title": "Donde hay fiesta, hay Valmari sin medida.",
+    "description": "El más completo. Visual, sabroso y perfecto pa' romperla.",
+    "capacity": "25-35 personas",
+    "image": "/packkk3.webp",
+    "imageAlt": "Pack 3 de Valmarí - Barra de snacks premium completa para fiestas y eventos grandes",
+    "bgColor": "bg-primary",
+    "textColor": "text-black",
+    "titleColor": "text-black",
+    "reserveButtonColor": "text-black"
+  }
+]
