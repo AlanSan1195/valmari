@@ -1,9 +1,14 @@
 ---
 import Candys from "@/components/Candys.astro";
+import { navLinks, whatsappNumber, whatsappMessage } from "@/services/constantes";
+import packs from "@/data/packs.json";
+
+const whatsapp = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 ---
 
-<section id="packs"
-  class="max-w-[1450px] flex-col items-center justify-center px-4 md:mx-auto "
+<section
+  id="packs"
+  class="max-w-[1450px] flex-col items-center justify-center px-4 md:mx-auto"
   aria-label="Paquetes para tu fiesta "
 >
   <!-- <div class="h-16 md:h-20 w-full bg-primary mt-30 md:mt-48"></div> -->
@@ -19,168 +24,68 @@ import Candys from "@/components/Candys.astro";
     <div
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 md:gap-x-18 md:px-8 mt-8 md:mt-20 py-2 justify-center items-center mx-auto"
     >
-      <!-- pack 1 -->
-      <article
-        class="flex-col px-4 relative group w-auto h-auto"
-        role="listitem"
-      >
-        <a
-          class="opacity-0 absolute -rotate-90 -left-40 bottom-55 uppercase font-mango m-0 p-0 text-5xl font-bold group-hover:transform group-hover:opacity-100 group-hover:-translate-x-8 transition duration-400 hover:cursor-pointer"
+      {packs.map((pack) => (
+        
+        <article
+          class="flex-col px-4 relative group w-auto h-auto"
+          role="listitem"
         >
-          Apartar fecha
-        </a>
-        <a
-          class="flex md:hidden font-bold text-4xl text-center justify-center mb-2 uppercase"
-        >
-          Reservar
-        </a>
+          <a
+            href={whatsapp}
+            class="opacity-0 absolute -rotate-90 -left-40 bottom-55 uppercase font-mango m-0 p-0 text-5xl font-bold md:group-hover:transform md:group-hover:opacity-100 md:group-hover:-translate-x-8 transition duration-400 hover:cursor-pointer"
+          >
+            Apartar fecha
+          </a>
+          <a
+            href={whatsapp}
+            class={`flex md:hidden font-bold text-4xl text-center justify-center mb-2 uppercase ${pack.reserveButtonColor}`}
+          >
+            Reservar
+          </a>
 
-        <div
-          class="bg-primary rounded-3xl h-auto w-full flex flex-col px-4 hover:transform hover:translate-x-6 hover:-translate-y-6 hover:bg-transparent duration-500 ease-in-out z-10"
-        >
-          <img
-            src="/promo1.webp"
-            alt="Pack 1 de Valmarí - Barra de snacks para reuniones pequeñas con gomitas y botanas"
-            class="m-auto h-[270px] w-auto"
-            loading="lazy"
-          />
-          <div class="relative my-8 md:my-10">
-            <header class=" ">
-              <p class="font-mango uppercase text-xl">Pack 1</p>
-              <p
-                class="font-mango uppercase font-extrabold text-[20px] md:text-[23px] group-hover:opacity-0 duration-100 "
+                    <div
+            class={`${pack.bgColor} rounded-3xl h-auto w-full flex flex-col px-4 md:hover:transform md:hover:translate-x-6 md:hover:-translate-y-6 md:hover:bg-transparent duration-500 ease-in-out z-10`}
+          >
+            <img
+              src={pack.image}
+              alt={pack.imageAlt}
+              class="m-auto h-[270px] w-auto"
+              loading="lazy"
+            />
+            <div class="relative my-8 md:my-10">
+              <header>
+                <p class={`${pack.textColor} md:group-hover:text-black font-mango uppercase text-xl`}>
+                  {pack.name}
+                </p>
+                <p
+                  class={`${pack.titleColor} font-mango uppercase font-extrabold text-[20px] md:text-[23px] md:group-hover:opacity-0 duration-100`}
+                >
+                  {pack.title}
+                </p>
+                <p
+                  id={`desc-pack${pack.id}`}
+                  class={`md:hidden font-mango text-white text-sm`}
+                >
+                  {pack.description}
+                </p>
+                <span class={`text-sm font-bold md:hidden ${pack.titleColor}`}>
+                  {pack.capacity}
+                </span>
+              </header>
+              <div
+                class="opacity-0 flex flex-col absolute -bottom-4 md:group-hover:opacity-100 md:transition-opacity"
               >
-                Pa’ reuniones relax... y risas con gomitas.
-              </p>
-              <p
-                id="desc-pack1"
-                class="md:hidden font-mango text-white text-sm"
-              >
-                Ideal para eventos pequeños, vibe tranqui pero con sabor.
-              </p>
-               <span class="text-sm font-bold md:hidden">7-14 personas. </span>
-            </header>
-            <div
-              class="opacity-0 absolute -bottom-4 group-hover:opacity-100 transition-opacity gap-y-3"
-            >
-              <p class="text-xl">
-                Ideal para eventos pequeños, vibe tranqui pero con sabor.
-              </p>
-              <span class="text-xl font-bold"> Entre 7-14 personas. </span>
+                <p class="text-xl">
+                  {pack.description}
+                </p>
+                <span class="text-xl font-bold">
+                  Entre {pack.capacity}
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-      </article>
-
-      <!-- pack 2 -->
-      <article
-        class="flex-col px-4 relative group w-auto h-auto"
-        role="listitem"
-      >
-        <a
-          href="#"
-          class="opacity-0 absolute -rotate-90 -left-40 bottom-55 uppercase font-mango m-0 p-0 text-5xl font-bold group-hover:transform group-hover:opacity-100 group-hover:-translate-x-8 transition duration-400 hover:cursor-pointer"
-        >
-          Apartar fecha
-        </a>
-        <a
-          class="flex md:hidden font-bold text-4xl text-center justify-center mb-2 uppercase text-primary "
-        >
-          Reservar
-        </a>
-        <div
-          class="bg-black rounded-3xl h-auto w-full flex flex-col px-4 hover:transform hover:translate-x-6 hover:-translate-y-6 hover:bg-transparent duration-500 ease-in-out z-10"
-        >
-          <img
-            src="/promo3.webp"
-            alt="Pack 2 de Valmarí - Barra de snacks completa con variedad de botanas gourmet para eventos medianos"
-            class="m-auto h-[270px] w-auto"
-            loading="lazy"
-          />
-          <div class="relative my-8 md:my-10">
-            <header class="">
-              <p
-                class="text-white group-hover:text-black font-mango uppercase text-xl"
-              >
-                Pack 2
-              </p>
-              <p
-                class="text-primary font-mango uppercase font-extrabold text-[20px] md:text-[23px] group-hover:opacity-0 duration-100"
-              >
-                Aquí ya se arma la botana de verdad
-              </p>
-              <p
-                id="desc-pack2"
-                class="md:hidden font-mango text-white text-sm"
-              >
-                Más variedad, más color, más flow para eventos con más ritmo.
-              </p>
-              <span class="text-sm font-bold md:hidden text-primary">14-25 personas. </span>
-            </header>
-            <div
-              class="opacity-0 flex flex-col absolute -bottom-4 group-hover:opacity-100 transition-opacity"
-            >
-              <p class="text-xl">
-                Más variedad, más color, más flow para eventos con más ritmo.
-              </p>
-              <span class="text-xl font-bold"> Entre 14-25 personas. </span>
-            </div>
-          </div>
-        </div>
-      </article>
-      <!-- pack 3 -->
-      <article
-        class="flex-col px-4 relative group w-auto h-auto"
-        role="listitem"
-      >
-        <a
-          href="#"
-          class="opacity-0 absolute -rotate-90 -left-40 bottom-55 uppercase font-mango m-0 p-0 text-5xl font-bold group-hover:transform group-hover:opacity-100 group-hover:-translate-x-8 transition duration-400 hover:cursor-pointer"
-        >
-          Apartar fecha
-        </a>
-        <a
-          class="flex md:hidden font-bold text-4xl text-center justify-center mb-2 uppercase"
-        >
-          Reservar
-        </a>
-        <div
-          class="bg-primary rounded-3xl h-auto w-full flex flex-col px-4 hover:transform hover:translate-x-6 hover:-translate-y-6 hover:bg-transparent duration-500 ease-in-out z-10"
-        >
-          <img
-            src="/packkk3.webp"
-            alt="Pack 3 de Valmarí - Barra de snacks premium completa para fiestas y eventos grandes"
-            class="m-auto h-[270px] w-auto"
-            loading="lazy"
-          />
-
-          <div class="relative my-8 md:my-10">
-            <header class="">
-              <p class="font-mango uppercase text-xl">Pack 3</p>
-              <p
-                class="font-mango uppercase font-extrabold text-[20px] md:text-[23px] group-hover:opacity-0 duration-100"
-              >
-                Donde hay fiesta, hay Valmari sin medida.
-              </p>
-              <p
-                id="desc-pack3"
-                class="md:hidden font-mango text-white text-sm"
-              >
-                El más completo. Visual, sabroso y perfecto pa' romperla.
-              </p>
-              <span class="text-sm font-bold md:hidden">25-35 personas. </span>
-            </header>
-            <div
-              class="opacity-0 absolute -bottom-4 group-hover:opacity-100 transition-opacity"
-            >
-              <p class="text-xl">
-                El más completo. Visual, sabroso y perfecto pa' romperla.
-              </p>
-              <span class="text-xl font-bold"> Entre 25-35 personas. </span>
-            </div>
-          </div>
-        </div>
-      </article>
+        </article>
+      ))}
     </div>
   </div>
   <Candys />
