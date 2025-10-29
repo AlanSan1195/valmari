@@ -1,4 +1,5 @@
-<section id="nosotros"
+<section
+  id="nosotros"
   class="flex flex-col h-full relative items-center justify-center my-32"
   aria-label="Próximamente más contenido"
 >
@@ -18,7 +19,7 @@
     />
   </figure>
 
-  <div class="absolute inset-0 flex justify-center items-center ">
+  <div class="absolute inset-0 flex justify-center items-center">
     <!-- Checkbox oculto para manejar el estado -->
     <input type="checkbox" id="toggle-grid" class="peer hidden" />
 
@@ -45,14 +46,14 @@
     <div
       class="fixed inset-0 opacity-0 scale-0 peer-checked:opacity-100 peer-checked:scale-100 transition-transform duration-700 ease-out pointer-events-none peer-checked:pointer-events-auto justify-center items-center content-center backdrop-blur-md bg-black/10"
     >
-      <div class="w-full h-[100dvh] p-8 flex justify-center items-center gap-4">
+      <div class="w-full h-full p-8 flex justify-center items-center gap-4">
         <!-- Elementos de la grilla -->
         <div
-          class="bg-primary w-[110dvh] h-[110dvh] rounded-full flex flex-col items-center justify-center p-4"
+          class="bg-primary w-[110dvh] h-[110dvh] rounded-full flex flex-col items-center justify-center "
         >
           <div
             id="info-nosotros"
-            class="flex flex-col md:flex-row items-center content-center justify-between md:px-24 px-4 border-2 relative w-full h-auto"
+            class=" grid items-center content-center justify-between  px-10 py-10  relative w-full h-auto gap-x-2 gap-y-2 md:gap-y-10 "
           >
             <!-- Botón para cerrar (opcional) -->
             <label
@@ -61,14 +62,35 @@
             >
               <span class="text-white text-2xl font-bold">×</span>
             </label>
+            <!-- nombres -->
+            <div class=" flex flex-col md:flex-row justify-center md:gap-x-10    gap-y-5  w-auto ">
 
-            <img
-              src="/US4.webp"
-              alt="logo de la empresa"
-              class="h-[50dvh] w-auto md:order-2"
-            />
-            <p class="md:order-1">nombre</p>
-            <p class="md:order-3">descripcion</p>
+               <div class=" w-auto flex justify-center flex-col text-center " >
+                 <h2 class="text-white font-mango uppercase text-xl font-bold md:text-3xl">Valeria Guzmán</h2>
+                 <p class="text-black font-mango px-12 text-pretty text-sm md:text-lg ">La más servicial </p>
+               </div>
+               <div class=" w-auto flex justify-center flex-col text-center " >
+                 <h2 class="text-white font-mango uppercase text-xl font-bold md:text-3xl">Marlenne Gómez</h2>
+                 <p class="text-black font-mango px-12 text-pretty text-sm md:text-lg">La más energética</p>
+               </div>
+             </div>
+           
+
+            <!-- imagen -->
+             <div class="  flex  justify-center items-center mx-auto  -translate-y-7 ">
+
+               <img
+                 src="/US4.webp"
+                 alt="logo de la empresa"
+                 class="h-[40dvh]  md:h-[50dvh] w-auto rounded-3xl "
+               />
+             </div>
+
+             <!-- que hacemos  -->
+            <div class=" flex flex-col justify-center text-center  md:px-4 md:mb-7 gap-y-2">
+              <h2 class="text-white font-mango uppercase text-xl md:text-5xl font-bold">Servicio a domicilio</h2>
+              <p class="text-black font-mango px-2 md:px-20 text-pretty text-sm md:text-lg">Comunicate con nosotros para tener más información Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptas vitae officia repudiandae modi sunt, rem adipisci quasi mollitia sapiente error distinctio ullam ad architecto, earum at suscipit, dignissimos expedita?</p>
+            </div>
           </div>
         </div>
       </div>
