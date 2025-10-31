@@ -1,0 +1,22 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "name": "Valeria Guzmán",
+      "description": "La más servicial",
+      "image": "/US4.webp",
+      "imageAlt": "Valeria Guzmán - Cofundadora de Valmarí"
+    },
+    {
+      "id": 2,
+      "name": "Marlenne Gómez",
+      "description": "La más energética",
+      "image": "/US4.webp",
+      "imageAlt": "Marlenne Gómez - Cofundadora de Valmarí"
+    }
+  ],
+  "service": {
+    "title": "Servicio a domicilio",
+    "description": "Comunícate con nosotros para tener más información, y ten un servicio personalizado, siempre tendremos una disposición para tu evento."
+  }
+}
