@@ -12,12 +12,13 @@ const whatsappSm = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(wh
   <!-- Label como botón circular -->
   <label
     for="menu-toggle"
-    class="w-12 h-12 bg-primary rounded-full shadow-lg flex items-center justify-center hover:scale-110 active:scale-95 transition-transform duration-300 cursor-pointer peer-checked:bg-black"
+    class="w-12 h-12 bg-primary peer-checked:bg-black rounded-full shadow-lg flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer"
     aria-label="Abrir menú de navegación"
   >
     <!-- Icono de menú (visible por defecto) -->
     <svg
-      class="w-8 h-8 text-black peer-checked:hidden transition-all duration-300"
+      id="menu-icon"
+      class="w-6 h-6 text-black transition-all duration-300"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -32,7 +33,8 @@ const whatsappSm = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(wh
     
     <!-- Icono de cerrar (visible cuando está checked) -->
     <svg
-      class="w-8 h-8 text-white hidden peer-checked:block transition-all duration-300 "
+      id="close-icon"
+      class="w-6 h-6 text-white hidden transition-all duration-300"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -81,3 +83,19 @@ const whatsappSm = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(wh
     </ul>
   </nav>
 </div>
+
+<style>
+  /* Cambiar ícono cuando el checkbox está marcado */
+  #menu-toggle:checked ~ label #menu-icon {
+    display: none;
+  }
+  
+  #menu-toggle:checked ~ label #close-icon {
+    display: block;
+  }
+  
+  /* Cambiar color de fondo del label cuando está checked */
+  #menu-toggle:checked ~ label {
+    background-color: black;
+  }
+</style>
