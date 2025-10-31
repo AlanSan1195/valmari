@@ -13,7 +13,7 @@ interface Props {
 const {
   title = 'Valmarí - Barra de Snacks GDL | Eventos, Fiestas y Reuniones en Guadalajara',
   description = 'Barra de snacks premium en Guadalajara (GDL). Packs personalizados para eventos, fiestas, bodas y reuniones. Botanas gourmet, candy bar y mesa de dulces. ¡Cotiza ahora!',
-  image = '/logo-full.svg',
+  image = '/logo-meta.webp',
   keywords = 'barra de snacks gdl, barra de snacks guadalajara, snacks para eventos gdl, candy bar guadalajara, mesa de dulces gdl, botanas para fiestas guadalajara, eventos gdl, fiestas guadalajara, snacks premium gdl, botanas gourmet guadalajara, barra de botanas gdl, snacks para bodas guadalajara, eventos corporativos gdl, reuniones guadalajara'
 } = Astro.props;
 
@@ -27,7 +27,6 @@ const fullImageUrl = new URL(image, siteUrl).toString();
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} />
     
     <!-- Meta Tags Principales -->
     <title>{title}</title>
