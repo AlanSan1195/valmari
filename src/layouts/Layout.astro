@@ -1,6 +1,7 @@
 ---
 import '@/styles/global.css';
 import NavSm from '@/components/NavSm.astro';
+import Header from '@/components/Header.astro';
 
 interface Props {
   title?: string;
@@ -193,6 +194,7 @@ const fullImageUrl = new URL(image, siteUrl).toString();
     >
     </div>
     <NavSm />
+    <Header />
     <slot />
   </body>
 </html>
