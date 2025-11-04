@@ -9,7 +9,10 @@ const { members, service } = teamData;
   aria-labelledby="nosotros-heading"
 >
   <!-- Background animado con el logo -->
-  <figure class="relative h-auto w-full flex items-center flex-nowrap " aria-hidden="true">
+  <figure
+    class="relative h-auto w-full flex items-center flex-nowrap"
+    aria-hidden="true"
+  >
     <img
       src="/fontBig.svg"
       alt=""
@@ -26,10 +29,10 @@ const { members, service } = teamData;
 
   <div class="absolute inset-0 flex justify-center items-center">
     <!-- Checkbox oculto para manejar el estado -->
-    <input 
-      type="checkbox" 
-      id="toggle-grid" 
-      class="peer hidden" 
+    <input
+      type="checkbox"
+      id="toggle-grid"
+      class="peer hidden"
       aria-label="Mostrar información sobre nosotros"
     />
 
@@ -58,40 +61,57 @@ const { members, service } = teamData;
       aria-labelledby="nosotros-heading"
     >
       <!-- Backdrop con blur -->
-      <div class="absolute inset-0 -z-10 h-full w-full fade-backdrop" aria-hidden="true"></div>
-      
+      <div
+        class="absolute inset-0 -z-10 h-full w-full fade-backdrop"
+        aria-hidden="true"
+      >
+      </div>
+
       <!-- Contenedor principal -->
-      <div class="w-full h-full p-4 md:p-8 flex justify-center items-center gap-4">
+      <div
+        class="w-full h-full p-4 md:p-8 flex justify-center items-center gap-4"
+      >
         <!-- Card circular con información -->
         <article
-          class="bg-primary w-full  h-[110dvh] rounded-full flex flex-col items-center justify-center relative px-4 md:px-32"
+          class="bg-primary w-full h-[110dvh] rounded-full flex flex-col items-center justify-center relative px-4 md:px-32"
         >
-          <div class="flex flex-col items-center justify-center px-6 md:px-10 py-20 md:py-32 relative w-full h-auto gap-y-4 md:gap-y-10">
-            
+          <div
+            class="flex flex-col items-center justify-center px-6 md:px-10 py-20 md:py-32 relative w-full h-auto gap-y-4 md:gap-y-10"
+          >
             <!-- Botón de cerrar -->
             <label
               for="toggle-grid"
               class="absolute top-18 -right-5 md:top-36 w-12 h-12 bg-black rounded-full flex items-center justify-center hover:scale-110 hover:rotate-90 transition-all duration-300 cursor-pointer z-30"
               aria-label="Cerrar información sobre nosotros "
             >
-              <span class="text-white text-2xl font-bold leading-none" aria-hidden="true">×</span>
+              <span
+                class="text-white text-2xl font-bold leading-none"
+                aria-hidden="true">×</span
+              >
             </label>
 
             <!-- Miembros del equipo -->
-            <div class="w-full flex flex-col md:flex-row px-2 sm:px-10 md:px-10 justify-center items-center md:justify-around mx-auto gap-y-2 md:gap-y-2 gap-x-4">
-              
+            <div
+              class="w-full flex flex-col md:flex-row px-2 sm:px-10 md:px-10 justify-center items-center md:justify-around mx-auto gap-y-2 md:gap-y-2 gap-x-4"
+            >
               <!-- Primer miembro -->
               <div class="flex flex-col text-center mt-4 order-1">
-                <h3 class="text-white font-mango uppercase text-lg md:text-3xl font-bold">
+                <h3
+                  class="text-white font-mango uppercase text-lg md:text-3xl font-bold"
+                >
                   {members[0].name}
                 </h3>
-                <p class="text-black font-mango px-4 md:px-12 text-pretty text-xs md:text-lg font-semibold ">
+                <p
+                  class="text-black font-mango px-4 md:px-12 text-pretty text-xs md:text-lg font-semibold"
+                >
                   {members[0].description}
                 </p>
               </div>
 
               <!-- Imagen central -->
-              <figure class="flex justify-center items-center mx-auto md:-translate-y-10 order-2">
+              <figure
+                class="flex justify-center items-center mx-auto md:-translate-y-10 order-2"
+              >
                 <img
                   src={members[0].image}
                   alt={members[0].imageAlt}
@@ -104,21 +124,31 @@ const { members, service } = teamData;
 
               <!-- Segundo miembro -->
               <div class="flex flex-col text-center order-3 mt-4">
-                <h3 class="text-white font-mango uppercase text-lg md:text-3xl font-bold">
+                <h3
+                  class="text-white font-mango uppercase text-lg md:text-3xl font-bold"
+                >
                   {members[1].name}
                 </h3>
-                <p class="text-black font-mango px-4 md:px-12 text-pretty text-xs md:text-lg font-semibold">
+                <p
+                  class="text-black font-mango px-4 md:px-12 text-pretty text-xs md:text-lg font-semibold"
+                >
                   {members[1].description}
                 </p>
               </div>
             </div>
 
             <!-- Información del servicio -->
-            <div class="flex flex-col justify-center items-center text-center w-full max-w-4xl mx-auto md:px-4 md:mb-7 pt-4 md:pt-2">
-              <h3 class="text-white font-mango uppercase text-lg md:text-5xl font-semibold">
+            <div
+              class="flex flex-col justify-center items-center text-center w-full max-w-4xl mx-auto md:px-4 md:mb-7 pt-4 md:pt-2"
+            >
+              <h3
+                class="text-white font-mango uppercase text-lg md:text-5xl font-semibold"
+              >
                 {service.title}
               </h3>
-              <p class="text-black font-mango px-2 md:px-20 text-pretty text-xs md:text-xl mt-2 ">
+              <p
+                class="text-black font-mango px-2 md:px-20 text-pretty text-xs md:text-xl mt-2"
+              >
                 {service.description}
               </p>
             </div>
@@ -135,11 +165,11 @@ const { members, service } = teamData;
       transform: translateX(-100%);
     }
   }
-  
+
   .valamri-font-big {
-    animation: moveName 13s linear infinite;
-    white-space: nowrap;
-    will-change: transform;
+    animation: moveName 12s ease-in-out infinite;
+    /* white-space: nowrap;
+    will-change: transform; */
   }
 
   @keyframes fadeBackdrop {
@@ -175,5 +205,4 @@ const { members, service } = teamData;
   #ring-button {
     animation: scaleRing 3s infinite;
   }
-  
 </style>
