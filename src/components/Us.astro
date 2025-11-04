@@ -5,25 +5,27 @@ const { members, service } = teamData;
 
 <section
   id="nosotros"
-  class="flex flex-col h-full relative items-center justify-center my-20"
+  class="flex flex-col w-full  h-full relative items-center justify-center my-20"
   aria-labelledby="nosotros-heading"
 >
   <!-- Background animado con el logo -->
   <figure
-    class="relative h-auto w-full flex items-center flex-nowrap"
+    class="relative h-auto w-full flex items-center flex-nowrap "
     aria-hidden="true"
   >
     <img
+      id="linea1"
       src="/fontBig.svg"
       alt=""
-      class="valamri-font-big max-w-none h-[110dvh] w-auto whitespace-nowrap backface-hidden transform-3d"
-      loading="lazy"
+      class="valamri-font-big max-w-none h-[70vh] md:h-[110dvh] w-auto whitespace-nowrap backface-hidden transform-3d -z-10"
+
     />
     <img
+      id="linea2"
       src="/fontBig.svg"
       alt=""
-      class="valamri-font-big max-w-none h-[110dvh] w-auto whitespace-nowrap backface-hidden transform-3d"
-      loading="lazy"
+      class="valamri-font-big max-w-none h-[70vh] md:h-[110dvh] w-auto whitespace-nowrap backface-hidden transform-3d -z-10"
+
     />
   </figure>
 
@@ -161,8 +163,11 @@ const { members, service } = teamData;
 
 <style>
   @keyframes moveName {
-    to {
-      transform: translateX(-100%);
+    0% {
+      transform: translate(0);
+    }
+    100% {
+      transform: translate(-100%);
     }
   }
 
