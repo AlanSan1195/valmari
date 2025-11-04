@@ -1,6 +1,6 @@
 
 <!-- sm -->
-<div id="logo-hero-sm" class="md:hidden scale-80 ">
+<!-- <div id="logo-hero-sm" class="md:hidden scale-80 ">
   <img
     id="linea1"
     src="/linea1.svg"
@@ -20,12 +20,12 @@
     alt="linea 2"
     class="absolute top-0 scale-110 translate-x-5"
   />
-</div>
+</div> -->
 
 <!-- md -->
 <div
   id="logo-hero-md"
-  class="hidden opacity-0 h-full w-full md:block md:opacity-100 content-center relative scale-100 md:scale-90"
+  class=" h-full w-full content-center relative scale-90"
 >
   <div id="logo-md" class="">
     <div class="relative flex justify-center items-center">
@@ -36,20 +36,20 @@
         class="scale-90 md:scale-130"
       />
       <img
-        id="linea2"
-        src="/linea2.svg"
-        alt="linea 2"
-        class="absolute top-0 left-0 translate-x-8 -translate-y-0 md:translate-x-7 md:-translate-y-6 scale-100 md:scale-130 -z-10"
+        id="linea1"
+        src="/linea1.svg"
+        alt="linea 1"
+        class="absolute top-0 left-0 translate-x-4 md:translate-x-10 md:-translate-y-6 scale-100 md:scale-130 -z-10"
       />
       <div
         id="blur-logo-md"
         class="absolute inset-0 scale-110 md:scale-120 z-10"
       >
         <img
-          id="linea1"
-          src="/linea1.svg"
-          alt="linea 1"
-          class="absolute translate-x-4 -translate-y-4 scale-90 md:scale-110"
+          id="linea2"
+          src="/linea2.svg"
+          alt="linea 2"
+          class="absolute translate-x-2 -translate-y-2 md:translate-x-4 md:-translate-y-4 scale-90 md:scale-110"
         />
         <img
           id="linea1"
@@ -115,10 +115,10 @@
   }
 
   #linea1 {
-    animation: move-line-x 3s ease-in infinite alternate;
-  }
-  #linea2 {
     animation: move-line-y 3s ease-in infinite alternate;
     animation-delay: 20ms;
+  }
+  #linea2 {
+    animation: move-line-x 3s ease-in infinite alternate;
   }
 </style>

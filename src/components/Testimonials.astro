@@ -9,8 +9,8 @@ import testimonials from '@/data/testimonials.json';
   <div class="max-w-7xl w-full ">
     <!-- Título de la sección -->
     <div class=" flex flex-col text-center justify-center items-center mb-12   gap-y-10 w-auto">
-      <img src="/clientes.svg" alt="Clientes Svg" class=" w-full scale-80 ">
-      <p class="font-mango text-xl  uppercase md:text-5xl text-black">
+      <img src="/clientes.svg" alt="Clientes Svg" class=" w-screen h-auto  ">
+      <p class="font-mango text-2xl  uppercase md:text-5xl text-black">
         Lo que dicen nuestros clientes sobre Valmarí
       </p>
     </div>
@@ -31,10 +31,10 @@ import testimonials from '@/data/testimonials.json';
           >
             {/* Nombre del cliente */}
             <div class="mb-4">
-              <h3 class={`font-mango text-2xl font-bold ${textColor} mb-1`}>
+              <h3 class={`font-mango text-2xl font-bold uppercase ${textColor} mb-1`}>
                 {testimonial.name}
               </h3>
-              <p class={`text-sm ${textColor} font-mango`}>
+              <p class={`text-xs md:text-sm ${textColor} font-mango`}>
                 {testimonial.event}
               </p>
             </div>
@@ -49,7 +49,7 @@ import testimonials from '@/data/testimonials.json';
             </div>
 
             {/* Comentario */}
-            <p class={`text-sm ${textColor} font-mango`}>
+            <p class={`text-xs md:text-sm ${textColor} font-mango`}>
               {testimonial.comment}
             </p>
           </article>
@@ -73,7 +73,7 @@ import testimonials from '@/data/testimonials.json';
   </div>
   <!-- Call to action final -->
   <div class="mt-16 md:mt-20 text-center">
-    <div class=" rounded-3xl p-8 md:p-12 max-w-4xl mx-auto border-8 border-primary">
+    <div class=" rounded-3xl p-8 md:p-12 max-w-4xl mx-auto border-3 md:border-8 border-primary">
       <p class="font-mango text-xl md:text-4xl font-bold mb-4 uppercase">
         Nuestra prioridad es la calidad y el servicio <span class="text-primary size-12">.</span>
       </p>
