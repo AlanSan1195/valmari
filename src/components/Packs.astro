@@ -56,7 +56,7 @@ const whatsapp = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(what
               </p>
 
               <div
-                class={`${pack.bgColor} rounded-3xl h-auto w-full flex flex-col px-4 md:hover:transform md:hover:translate-x-6 md:hover:-translate-y-6 md:hover:bg-transparent duration-500 ease-in-out z-10`}
+                class={`${pack.bgColor} corner h-auto w-full flex flex-col px-4 md:hover:transform md:hover:translate-x-6 md:hover:-translate-y-6 md:hover:bg-transparent duration-500 ease-in-out z-10`}
               >
                 <img
                   src={pack.image}
@@ -102,3 +102,11 @@ const whatsapp = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(what
   </div>
   <Candys />
 </section>
+
+
+<style>
+  .corner {
+    border-radius: 60px;
+    corner-shape: squircle;
+  }
+</style>

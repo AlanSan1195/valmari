@@ -27,7 +27,7 @@ import testimonials from '@/data/testimonials.json';
         
         return (
           <article 
-            class={`${bgColor} rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between`}
+            class={`${bgColor} corner p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between`}
           >
             {/* Nombre del cliente */}
             <div class="mb-4">
@@ -73,7 +73,7 @@ import testimonials from '@/data/testimonials.json';
   </div>
   <!-- Call to action final -->
   <div class="mt-16 md:mt-20 text-center">
-    <div class=" rounded-3xl p-8 md:p-12 max-w-4xl mx-auto border-3 md:border-8 border-primary">
+    <div class=" corner p-8 md:p-12 max-w-4xl mx-auto border-3 md:border-8 border-primary">
       <p class="font-mango text-xl md:text-4xl font-bold mb-4 uppercase">
         Nuestra prioridad es la calidad y el servicio <span class="text-primary size-12">.</span>
       </p>
@@ -108,5 +108,9 @@ import testimonials from '@/data/testimonials.json';
       opacity: 1;
       transform: translateY(0);
     }
+  }
+  .corner {
+    border-radius: 60px;
+    corner-shape: squircle;
   }
 </style>
